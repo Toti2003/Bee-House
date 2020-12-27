@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--pro ikonky zdarma-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <!--pro google font-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,500,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
+    <!--pro google font-->
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main.css">
+    <title>Vystava</title>
+    <style>
+        
+        .animace {
+            text-decoration: none;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            position: relative;
+            
+            overflow: hidden;
+        }
+        .animace::before { 
+            position: absolute;
+            content: 'SPONZOR';
+            top: center;
+            left: center;
+            background-color: orange;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            transform-origin: center;
+            transform: scale(10);
+            transition: transform 1s;
+        }
+        .animace:hover::before {
+            transform: scale(1) translate(-15px, -8px);
+            color: white;
+            z-index: 3;
+            padding: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-md sticky-top">
+            <a href="#" class="navbar-brand">
+                <h3 class="mb-0">VYSTAVA</h3>
+            </a>
+            <button class="navbar-toggler navbar-dark" data-toggle="collapse" data-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#onas" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#karusel" class="nav-link">Explore</a></li>
+                    <li class="nav-item"><a href="#kontakt" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#header" class="nav-link">Book</a></li>
+                    <li class="nav-item"><a href="sponzor.html" class="nav-link">Ikon</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="home" class="d-flex justify-content-center align-items-center">
+            <div id="overlay"></div>
+            <div class="container text-white text-center" id="header">
+                <h1 class="display-1">VCELIN 2020</h1>
+                <h3 class="display-5 mb-3">MATKA ZIVITELKA - OLOMOUC</h3>
+                <span title="Rezervujte si vstupenky." data-toggle="tooltip" data-placement="top"><button id="rez"
+                        class="btn btn-lg btn-warning rounded-pill" data-toggle="modal"
+                        data-target="#rezervace">Rezervujte hned!</button></span>
+
+                
+                 
+                <div id="click-me" type="button" class="btn btn-lg btn-warning rounded-pill animace" data-toggle="popover" data-placement="right" data-html="true" title="Odkaz na sponzora."
+                    >Sponzor</div>
+
+            </div>
+        </section>
+    
+
+    <section id="onas">
+        <div class="container text-center mt-5">
+            <h2>Popis nasi vystavy:</h2>
+            <div class="row">
+                <div class="col-md-4 p-3 mt-3">
+                    
+                    <h3 class="p-3">Vcela domaci</h3>
+                    <p class="lead prvni">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore cum possimus
+                        optio commodi fugit tempora eos in pariatur incidunt nisi cupiditate, ducimus officia
+                        aspernatur?</p>
+                        <img src="images/vceladomaci.jfif" alt="" class="img-fluid d-none d-md-inline">
+                </div>
+                <div class="col-md-4 p-3 mt-3">
+                    
+                    <h3 class="p-3">Vcela domaci sbira med</h3>
+                    <p class="lead druhy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore cum possimus
+                        optio commodi fugit tempora eos in pariatur incidunt nisi cupiditate, ducimus officia
+                        aspernatur?</p>
+                        <img src="images/vcelaDomaciSber.jfif" alt="" class="img-fluid d-none d-md-inline">
+                </div>
+                <div class="col-md-4 p-3 mt-2">
+                    
+                    <h3 class="p-3">Vcela domaci utoci</h3>
+                    <p class="lead treti">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore cum possimus
+                        optio commodi fugit tempora eos in pariatur incidunt nisi cupiditate, ducimus officia
+                        aspernatur?</p>
+                        <img src="images/vcelaDomaciUtok.jfif" alt="" class="img-fluid d-none d-md-inline">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="karusel">
+        <div class="container mt-lg-5">
+            <div class="row">
+                <div class="col-lg-7">
+
+                    <div id="carVcela" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+
+                                <img src="images/vceladomaci.jfif" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/vcelaDomaciSber.jfif" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/vcelaDomaciUtok.jfif" class="d-block w-100" alt="...">
+                            </div>
+ 
+                        </div>
+                        <a class="carousel-control-prev" href="#carVcela" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carVcela" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <h3>Vceli karusel</h3>
+                    <p class="lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem provident vero vitae rerum.
+                        Dolorem, atque velit magnam distinctio nulla voluptas.
+                    </p>
+                    <a href="#">Chci videt vice<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-bar-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"/>
+                      </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ohlasy">
+        <div class="container text-center mt-4">
+            <h3>Ohlasy nasich navstevniku</h3>
+            <div class="row">
+                <div class="col-md-3 my-2">
+                    <i class="fab fa-superpowers fa-2x text-primary mb-3"></i>
+
+                    <blockquote class="blockquote">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam qui sit quod beatae
+                            incidunt placeat debitis ullam provident. Provident!</p>
+                        <footer class="blockquote-footer">Zakaznik 1</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-3 my-2">
+                    <i class="fas fa-anchor fa-2x text-primary mb-3"></i>
+                    <blockquote class="blockquote">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam qui sit quod beatae
+                            incidunt placeat debitis ullam provident. Provident!</p>
+                        <footer class="blockquote-footer">Zakaznik 2</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-3 my-2">
+                    <i class="fab fa-angellist fa-2x text-primary mb-3"></i>
+                    <blockquote class="blockquote">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam qui sit quod beatae
+                            incidunt placeat debitis ullam provident. Provident!</p>
+                        <footer class="blockquote-footer">Zakaznik 3</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-3 my-2">
+                    <i class="fab fa-aws fa-2x text-primary mb-3"></i>
+                    <blockquote class="blockquote">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In aperiam qui sit quod beatae
+                            incidunt placeat debitis ullam provident. Provident!</p>
+                        <footer class="blockquote-footer">Zakaznik 4</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="kontakt">
+        <div class="container mt-lg-5">
+            <form action="">
+                <h3>Zanechte , prosim, na sebe kontakt a my Vam zasleme prospekty</h3>
+                <div class="form-row">
+                    <div class="col-md">
+                        <label for="">Krestni jmeno:</label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Napiste sve jmeno">
+                    </div>
+                    <div class="col-md">
+                            <label for="">Prijmeni:</label>
+                            <input type="text" name="" id="" class="form-control" placeholder="Napiste sve prijmeni">
+                    </div>
+                    <div class="col-md">
+                        <label for="">Titul:</label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Napiste svuj titul">
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="">Adresa:</label>
+                        <input type="text" name="" id="" class="form-control" placeholder="Zanechte svou adresu">
+                    </div>
+                </div>
+            </form>
+            </div>
+    </section>
+
+    <section id="mapa">
+        <div class="container mt-lg-5 m-auto text-center">
+            <h3>Zde nas najdete:</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6121.024861585303!2d18.290359618678877!3d49.83167264446689!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713e333e4140a63%3A0x83f7ec3a96d45fd5!2zVsO9c3RhdmnFoXTEmyDEjGVybsOhIGxvdWthLCA3MDIgMDAgTW9yYXZza8OhIE9zdHJhdmEgYSBQxZnDrXZveg!5e0!3m2!1sen!2scz!4v1606475633487!5m2!1sen!2scz" width="500" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark">
+        <div class="container text-center text-white py-5">
+            <p class="lead">Muzete nas kontaktovat na odkazech nize</p>
+            <div class="row text-center justify-content-center flex-column flex-md-row">
+                        <div><i class="far fa-envelope-open"></i>
+                            Nas email: vystavy@ova.cz &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <div><i class="fas fa-map-marker-alt"></i>
+                            Adresa: Ostrava, vystavni 150, 735 26 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <div><i class="fas fa-phone"></i>
+                            Telefon: +420 736 892 556 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="pata" class="bg-secondary p-3">
+        <ul class="nav text-center justify-content-center flex-column flex-md-row">
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white"><i class="fab fa-tiktok"></i></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link text-white"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </section>
+
+    <div id="rezervace" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Rezervace vstupenek:</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Zde si muzete zarezervovat vstupenky s p5edstihem. Upozornujeme Vas , ze rezarvaci je nutno
+                        potvrdit primo u pokladny nejmene 10min pred ohlasenym vstupem.</p>
+                    <form action="#">
+                        <div class="form-group">
+                            <label for="jmen">Zadejte sve jmeno a prijmeni</label>
+                            <input type="text" name="jmeno" placeholder="Vase jmeno:">
+                            <input type="text" name="prij" placeholder="Vase prijmeni:">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="den">Zadejte den navstevy</label>
+                            <select name="" id="den" class="form-control">
+                                <option value="1">Pondeli</option>
+                                <option value="2">Utery</option>
+                                <option value="3">Streda</option>
+                                <option value="4">Ctvrtek</option>
+                                <option value="5">Patek</option>
+                                <option value="6">Sobota</option>
+                                <option value="7">Nedele</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ukazka">Zadejte velikost okruhu s pruvodcem:</label>
+                            <select name="" id="ukazka" class="form-control">
+                                <option value="nic" selected>Zadna</option>
+                                <option value="60">Celkova - 60min</option>
+                                <option value="30">Polovicni - 30min</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dotazy">Zanechte nam svuj komentar nebo dotazy:</label>
+                            <textarea name="" id="dotazy" rows="10" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Zanechte nam svuj telefon</label>
+                            <input type="text" class="form-control" id="tel" placeholder="+420 ... ... ...">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Zanechte nam svuj email</label>
+                            <input type="email" class="form-control" id="email" placeholder="login@domain">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Odeslat</button>
+                            <button type="reset" class="btn btn-warning">Resetovat</button>
+                            <button class="btn btn-secondary" data-dismiss="modal">Zavrit</button>
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!--dalsi javascripty-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            $('[data-toggle="popover"]').popover()
+
+        })
+        $('[data-toggle="popover"]').popover({
+    title: 'title',
+    content: '<a href="sponzor.html">Zde klikni pro zobrazeni sponzora.</a>',
+    html: true
+})
+    </script>
+</body>
+
+</html>

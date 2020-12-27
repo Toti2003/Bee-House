@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(245, 228, 185);
+}
+body {
+    font-family: "Lato", sans-serif;
+    width: 90%;
+    margin: auto;
+    padding-top: 70px;
+    background-color: rgb(247, 241, 229);
+}
+
+.navbar {
+    font-size: 3rem;
+    //position: relative;
+    right: 0%;
+    z-index: 3;
+    background: rgb(247, 211, 5);
+
+    .navbar-brand h3 {
+        font-style: italic;
+        color: blue;
+    }
+    .nav-item {
+        font-size: 2rem;
+        font-style: italic;
+        color: blue;
+        font-weight: 300;
+    }
+    .nav-link:hover {
+        border-bottom: 1px solid #3681b3;
+    }
+}
+
+.prvni {
+    font-family: "Roboto", sans-serif;
+}
+.druhy {
+    font-family: "Nerko One", cursive;
+}
+.treti {
+    font-family: "Inconsolata", monospace;
+}
+
+#home {
+    background: url("../images/vcela.jfif") bottom center / cover no-repeat;
+    min-height: 400px;
+    position: relative;
+    top: auto;
+
+    width: 100%;
+    #header {
+        z-index: 2;
+    }
+    #overlay {
+        background: rgba(0, 0, 0, 0.4); //zadani mezivrstvy
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%; //zruseni presahu podkladu - bud height:auto, nebo position:relative v r24
+        z-index: 1;
+    }
+    h1 {
+        font-family: "Questrial", sans-serif;
+        line-height: 1;
+    }
+}
+#ohlasy {
+    i {
+        opacity: 0.4;
+    }
+}
+#pata {
+    font-weight: 100;
+}
+#click-me {
+    margin: 30px;
+}
+@media (max-width: 768px) {
+    .navbar {
+        background: #f89602;
+        .nav-link:hover {
+            border-bottom: none;
+        }
+    }
+    #home {
+        min-height: 500px;
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
